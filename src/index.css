@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Game specific styles */
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #e5e7eb;
+  overflow: hidden;
+}
+
+.score, .models-count {
+  position: absolute;
+  top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.score {
+  left: 1rem;
+}
+
+.models-count {
+  right: 1rem;
+}
+
+.model {
+  position: absolute;
+  width: 32px;
+  height: 64px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.flash {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 0, 0.5);
+  border-radius: 50%;
+}
+
+.photographer {
+  position: absolute;
+  bottom: 1rem;
+  width: 64px;
+  height: 64px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: left 0.1s ease-out;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.game-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+  background-color: #2563eb;
+}
+
+.game-over-panel {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.game-over-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.game-over-score {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
